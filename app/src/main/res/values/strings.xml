@@ -6,4 +6,7 @@
     <string name="top_up">Top Up</string>
     <string name="my_order">My Order</string>
     <string name="add_to_cart">Add</string>
+    <string name="order_more">Order More</string>
+    <string name="no_order">No Order</string>
+    <string name="back_to_menu">Back to Menu</string>
 </resources>

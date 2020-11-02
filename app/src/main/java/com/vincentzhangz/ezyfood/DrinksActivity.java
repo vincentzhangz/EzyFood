@@ -1,5 +1,6 @@
 package com.vincentzhangz.ezyfood;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,7 +11,7 @@ import com.vincentzhangz.ezyfood.models.Drink;
 
 import java.util.Vector;
 
-public class DrinksActivity extends AppCompatActivity {
+public class DrinksActivity extends AppCompatActivity implements DrinksAdapter.OnDrinksListener {
     RecyclerView drinksRecyclerView;
     Vector<Drink> drinks;
 
@@ -22,7 +23,7 @@ public class DrinksActivity extends AppCompatActivity {
 
         drinks = new Vector<>();
         initData();
-        DrinksAdapter adapter = new DrinksAdapter(this, drinks);
+        DrinksAdapter adapter = new DrinksAdapter(this, drinks, this);
         drinksRecyclerView.setAdapter(adapter);
         drinksRecyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
@@ -32,4 +33,14 @@ public class DrinksActivity extends AppCompatActivity {
         drinks.add(new Drink("Milk Tea", 10000));
         drinks.add(new Drink("Coffee", 15000));
     }
+
+    @Override
+    public void onClick(int position) {
+
+        Intent intent = new Intent(getApplicationContext(), OrderDetail.class);
+        intent.putExtra("drink", drinks.get(position));
+        startActivity(intent);
+        finish();
+    }
+
 }
