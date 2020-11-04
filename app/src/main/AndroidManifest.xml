@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.EzyFood">
-        <activity android:name=".PayActivity"></activity>
+        <activity android:name=".SnacksActivity"></activity>
+        <activity android:name=".FoodsActivity" />
+        <activity android:name=".PayActivity" />
         <activity android:name=".OrderDetail" />
         <activity android:name=".MyOrderActivity" />
         <activity android:name=".DrinksActivity" />

@@ -17,9 +17,9 @@ import java.text.NumberFormat;
 import java.util.Currency;
 
 public class MyOrderActivity extends AppCompatActivity {
-    RecyclerView myOrderRecyclerView;
     public static TextView noOrder;
     public static LinearLayout payLayout;
+    RecyclerView myOrderRecyclerView;
     Button payNowButton;
     TextView total;
 

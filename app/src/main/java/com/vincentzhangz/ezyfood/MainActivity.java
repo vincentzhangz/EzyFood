@@ -12,7 +12,7 @@ import java.util.Vector;
 
 public class MainActivity extends AppCompatActivity {
     public static Vector<Product> myOrder = new Vector<>();
-    Button myOrderButton, drinksButton;
+    Button myOrderButton, drinksButton, foodsButton, snacksButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
 
         myOrderButton = findViewById(R.id.my_order_button);
         drinksButton = findViewById(R.id.drinks_button);
+        foodsButton = findViewById(R.id.foods_button);
+        snacksButton = findViewById(R.id.snacks_button);
 
 //        Utility.inflateData(myOrder, 10);
 
@@ -31,6 +33,16 @@ public class MainActivity extends AppCompatActivity {
 
         drinksButton.setOnClickListener(v -> {
             Intent intent = new Intent(getApplicationContext(), DrinksActivity.class);
+            startActivity(intent);
+        });
+
+        foodsButton.setOnClickListener(v -> {
+            Intent intent = new Intent(getApplicationContext(), FoodsActivity.class);
+            startActivity(intent);
+        });
+
+        snacksButton.setOnClickListener(v -> {
+            Intent intent = new Intent(getApplicationContext(), SnacksActivity.class);
             startActivity(intent);
         });
 

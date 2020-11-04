@@ -38,7 +38,7 @@ public class DrinksActivity extends AppCompatActivity implements DrinksAdapter.O
     public void onClick(int position) {
 
         Intent intent = new Intent(getApplicationContext(), OrderDetail.class);
-        intent.putExtra("drink", drinks.get(position));
+        intent.putExtra("products", drinks.get(position));
         startActivity(intent);
         finish();
     }
